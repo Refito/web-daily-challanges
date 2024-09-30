@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f1f1f1;
+}
+
+a,
+button {
+  all: unset;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 14rem;
+  gap: 3rem;
+}
+
+.pick-container {
+  box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./images/weekly-pick.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1.5rem;
+  color: white;
+  border-radius: 15px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+
+  .description {
+    h4 {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-weight: 300;
+      max-width: 25ch;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.like-container {
+  flex: 1;
+}
+
+.like {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  iconify-icon {
+    font-size: 0.8rem;
+    display: inline;
+  }
+}
+
+.cook {
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  font-weight: 700;
+  background-color: #f6b100;
+  border-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+}
+
+.recepies {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recepie {
+  box-shadow: 0px 0px 17px -5px rgba(0, 0, 0, 0.47);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0.4rem 2rem 0.4rem 0.4rem;
+
+  &.active {
+    background-color: #f6b100;
+
+    .description {
+      color: #ffffff;
+    }
+
+    .positive {
+      color: #000000;
+    }
+
+    .rating {
+      background-color: #ffffff;
+      color: #f6b100;
+    }
+  }
+
+  .description {
+    flex: 1;
+  }
+}
+
+.image-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  aspect-ratio: 16/9;
+  width: 10rem;
+  border-radius: 10px;
+
+  &#one {
+    background-image: url("./images/salad1.jpeg");
+  }
+
+  &#two {
+    background-image: url("./images/salad2.jpg");
+  }
+
+  &#three {
+    background-image: url("./images/salad3.jpg");
+  }
+
+  &#four {
+    background-image: url("./images/salad1.jpeg");
+  }
+
+  &#five {
+    background-image: url("./images/salad5.jpg");
+  }
+}
+
+.positive {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f6b100;
+}
+
+.rating {
+  display: flex;
+  background-color: #f6b100;
+  padding: 0.3rem 0.5rem;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}

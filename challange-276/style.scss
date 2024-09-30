@@ -1,0 +1,149 @@
+@use "sass:math";
+
+$background: #fafafa;
+$white: #ffffff;
+$star: #f59e0b;
+$textPrimary: #18181b;
+$textSecondary: #52525b;
+$border: #f5f5f5;
+
+@function calculateRem($size) {
+  $rem: math.div($size, 16px);
+
+  @return $rem * 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  all: unset;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: $textPrimary;
+  background-color: $border;
+}
+
+.content {
+  min-height: calc(100vh - 5rem * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $background;
+  margin: 5rem;
+}
+
+.header-container {
+  text-align: center;
+  margin-bottom: calculateRem(73px);
+
+  .upper-text {
+    font-size: calculateRem(18px);
+    margin-bottom: calculateRem(15px);
+    color: $textSecondary;
+  }
+
+  .heading {
+    font-size: calculateRem(42px);
+  }
+}
+
+.reviews {
+  position: relative;
+  display: flex;
+  gap: calculateRem(41px);
+
+  .background {
+    position: absolute;
+    width: 64%;
+    left: 18%;
+    top: -15%;
+    bottom: -15%;
+    background: linear-gradient(
+      90deg,
+      #44ff9a 0%,
+      #44b0ff 23%,
+      #8b44ff 49%,
+      #ff6644 74%,
+      #ebff70 100%
+    );
+
+    opacity: 0.3;
+  }
+
+  .review {
+    z-index: 5;
+    background-color: $white;
+    padding: calculateRem(42px);
+  }
+
+  .stars {
+    color: $star;
+    font-size: calculateRem(16px);
+  }
+
+  .review-content {
+    max-width: calculateRem(325px);
+    margin: calculateRem(34px) 0;
+    line-height: calculateRem(28px);
+    font-size: calculateRem(18px);
+  }
+
+  .author-container {
+    display: flex;
+  }
+
+  .author {
+    margin-left: calculateRem(16px);
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .author-name {
+      font-weight: 700;
+      font-size: calculateRem(16px);
+      margin-bottom: calculateRem(2px);
+    }
+
+    .author-role {
+      font-size: calculateRem(14px);
+      color: $textSecondary;
+    }
+  }
+}
+
+.call {
+  position: relative;
+  margin-top: calculateRem(74px);
+  font-weight: 700;
+  font-size: calculateRem(16px);
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calculateRem(-3px);
+    right: calculateRem(-3px);
+    bottom: -5px;
+    height: 2px;
+    color: transparent;
+    background-color: $textPrimary;
+    transition: 0.2s all;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::after {
+      left: calculateRem(-10px);
+      right: calculateRem(-10px);
+      transform: translateY(5px);
+    }
+  }
+}

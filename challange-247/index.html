@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="information">
+        <div class="title">
+          <div class="line"></div>
+          <h4>Rate our services</h4>
+        </div>
+        <h2>Fill the form to sumbit</h2>
+        <h2>your feedback</h2>
+        <p>We value your thoughts and experiences. Please take a</p>
+        <p>moment to share your feedback with us below, so we can</p>
+        <p>continue to improve and serve you better.</p>
+      </div>
+      <div class="form shadow">
+        <div class="field">
+          <h3>Name</h3>
+          <div class="input-container shadow">
+            <input type="text" placeholder="Full name" data-id="1" />
+            <iconify-icon
+              icon="octicon:person-24"
+              height="1.5rem"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div class="field">
+          <h3>Email</h3>
+          <div class="input-container shadow">
+            <input type="text" placeholder="Email address" data-id="2" />
+            <iconify-icon
+              icon="ic:outline-email"
+              height="1.5rem"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div class="field">
+          <h3>Phone Number</h3>
+          <div class="input-container shadow">
+            <input type="text" placeholder="Phone number" data-id="3" />
+            <iconify-icon
+              icon="cbi:apple-iphone"
+              height="1.5rem"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div class="field">
+          <h3>Company</h3>
+          <div class="input-container shadow">
+            <input type="text" placeholder="Company" data-id="4" />
+            <iconify-icon icon="ph:buildings" height="1.5rem"></iconify-icon>
+          </div>
+        </div>
+        <div class="rating">
+          <h3>Your service rating</h3>
+          <div class="stars">
+            <iconify-icon
+              icon="teenyicons:star-solid"
+              data-id="1"
+            ></iconify-icon>
+            <iconify-icon
+              icon="teenyicons:star-solid"
+              data-id="2"
+            ></iconify-icon>
+            <iconify-icon
+              icon="teenyicons:star-solid"
+              data-id="3"
+            ></iconify-icon>
+            <iconify-icon
+              icon="teenyicons:star-solid"
+              data-id="4"
+            ></iconify-icon>
+            <iconify-icon
+              icon="teenyicons:star-solid"
+              data-id="5"
+            ></iconify-icon>
+          </div>
+        </div>
+        <div class="additional-feedback">
+          <h3>Additional feedback</h3>
+          <textarea
+            class="shadow"
+            name="feedback"
+            id=""
+            cols="60"
+            rows="10"
+            placeholder="If you have any additional feedback, please type it in here..."
+          ></textarea>
+        </div>
+        <div class="privacy-policy">
+          <input type="checkbox" id="policy" />
+          <label for="policy">I have read and accept the Privacy Policy.</label>
+        </div>
+        <div class="submit">
+          <button class="shadow">Submit feedback</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  </body>
+</html>
